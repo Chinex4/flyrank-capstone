@@ -28,3 +28,17 @@ Clone the repository:
 ```bash
 git clone https://github.com/chinex4/flyrank-capstone.git
 cd flyrank-capstone
+```
+
+Install dependencies and run the app:
+
+```bash
+npm install
+npm start
+```
+
+Expected output:
+
+```
+FlyRank development environment is ready
+```
