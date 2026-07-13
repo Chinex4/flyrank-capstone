@@ -49,3 +49,18 @@ Before changing files:
 3. Avoid unrelated modifications.
 4. Preserve the existing project structure.
 5. Verify that the project still runs after changes.
+
+
+## Frontend Form Rules
+
+1. Every form control must have a visible label connected using `htmlFor` and `id`.
+
+2. Validation errors must be displayed beside the relevant field and connected using `aria-describedby`.
+
+3. Conditional fields must only be validated while they are enabled or visible.
+
+4. Form changes must include tests for valid input, invalid input, and conditional behaviour.
+
+5. Before committing frontend changes, run both `npm test` and `npm run build`.
+
+6. AI-generated UI must be checked manually for keyboard navigation, focus behaviour, and accessible status messages.
