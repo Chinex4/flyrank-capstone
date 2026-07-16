@@ -1,0 +1,91 @@
+:root {
+  --text: #5c5668;
+  --text-h: #1a1625;
+  --bg: #ffffff;
+  --panel-bg: #ffffff;
+  --border: #e2e0e8;
+  --code-bg: #f5f4f8;
+  --accent: #6d28d9;
+  --accent-hover: #5b21b6;
+  --accent-bg: rgba(109, 40, 217, 0.1);
+  --accent-bg-hover: rgba(109, 40, 217, 0.16);
+  --accent-border: rgba(109, 40, 217, 0.35);
+  --danger: #b91c1c;
+  --danger-border: rgba(185, 28, 28, 0.35);
+  --danger-bg: rgba(185, 28, 28, 0.08);
+  --priority-low-bg: #ecfdf5;
+  --priority-low-text: #047857;
+  --priority-medium-bg: #fffbeb;
+  --priority-medium-text: #b45309;
+  --priority-high-bg: #fef2f2;
+  --priority-high-text: #b91c1c;
+  --status-pending-bg: #eff6ff;
+  --status-pending-text: #1d4ed8;
+  --status-completed-bg: #ecfdf5;
+  --status-completed-text: #047857;
+  --shadow: 0 4px 12px rgba(26, 22, 37, 0.06);
+  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+
+  font: 16px/1.5 var(--sans);
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #a8a3b3;
+    --text-h: #f3f1f7;
+    --bg: #121018;
+    --panel-bg: #1a1724;
+    --border: #2f2a3d;
+    --code-bg: #221e2e;
+    --accent: #a78bfa;
+    --accent-hover: #c4b5fd;
+    --accent-bg: rgba(167, 139, 250, 0.15);
+    --accent-bg-hover: rgba(167, 139, 250, 0.22);
+    --accent-border: rgba(167, 139, 250, 0.4);
+    --danger: #f87171;
+    --danger-border: rgba(248, 113, 113, 0.4);
+    --danger-bg: rgba(248, 113, 113, 0.12);
+    --priority-low-bg: rgba(16, 185, 129, 0.15);
+    --priority-low-text: #6ee7b7;
+    --priority-medium-bg: rgba(245, 158, 11, 0.15);
+    --priority-medium-text: #fcd34d;
+    --priority-high-bg: rgba(239, 68, 68, 0.15);
+    --priority-high-text: #fca5a5;
+    --status-pending-bg: rgba(59, 130, 246, 0.15);
+    --status-pending-text: #93c5fd;
+    --status-completed-bg: rgba(16, 185, 129, 0.15);
+    --status-completed-text: #6ee7b7;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100svh;
+  background:
+    radial-gradient(circle at top, rgba(109, 40, 217, 0.08), transparent 45%),
+    var(--bg);
+}
+
+#root {
+  min-height: 100svh;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--sans);
+  color: var(--text-h);
+}
