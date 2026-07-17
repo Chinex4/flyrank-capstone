@@ -10,6 +10,7 @@ const navigation = [
   { href: "/tasks", label: "Tasks" },
   { href: "/calendar", label: "Calendar" },
   { href: "/settings", label: "Settings" },
+  { href: "/playground", label: "Playground" },
   { href: "/health", label: "Health" },
 ];
 
