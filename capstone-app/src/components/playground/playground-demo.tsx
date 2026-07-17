@@ -3,6 +3,17 @@
 import { AccessibleDialog } from "./accessible-dialog";
 import { AccessibleTabs } from "./accessible-tabs";
 import { Disclosure } from "./disclosure";
+import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export function PlaygroundDemo() {
   return (
@@ -63,6 +74,82 @@ export function PlaygroundDemo() {
           </div>
         </div>
       </article>
+
+      <section
+        className="grid gap-4 border-t border-border pt-6"
+        aria-labelledby="shadcn-reference-heading"
+      >
+        <div className="grid gap-2">
+          <p className="page-kicker">Shadcn reference implementations</p>
+          <h2 id="shadcn-reference-heading" className="text-2xl font-semibold">
+            Radix-backed dialog and tabs
+          </h2>
+        </div>
+
+        <div className="grid gap-4 md:grid-cols-2">
+          <article className="playground-panel">
+            <div className="grid gap-3">
+              <h3 className="text-xl font-semibold">Shadcn dialog</h3>
+              <div className="playground-preview">
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <Button type="button">Open shadcn dialog</Button>
+                  </DialogTrigger>
+                  <DialogContent>
+                    <DialogHeader>
+                      <DialogTitle>Review weekly study plan</DialogTitle>
+                      <DialogDescription>
+                        This reference uses the generated shadcn dialog wrapper
+                        around Radix Dialog primitives.
+                      </DialogDescription>
+                    </DialogHeader>
+                    <p className="text-sm text-muted-foreground">
+                      The composed content renders through DialogContent,
+                      DialogTitle, DialogDescription, and DialogClose primitives.
+                    </p>
+                    <DialogFooter>
+                      <Button type="button">Save reference</Button>
+                    </DialogFooter>
+                  </DialogContent>
+                </Dialog>
+              </div>
+            </div>
+          </article>
+
+          <article className="playground-panel">
+            <div className="grid gap-3">
+              <h3 className="text-xl font-semibold">Shadcn tabs</h3>
+              <div className="playground-preview">
+                <Tabs defaultValue="plan" className="w-full">
+                  <TabsList aria-label="Shadcn reference tabs">
+                    <TabsTrigger value="plan">Plan</TabsTrigger>
+                    <TabsTrigger value="focus">Focus</TabsTrigger>
+                    <TabsTrigger value="review">Review</TabsTrigger>
+                  </TabsList>
+                  <TabsContent
+                    value="plan"
+                    className="mt-4 rounded-md border border-border bg-background p-4"
+                  >
+                    Plan upcoming study blocks before the week starts.
+                  </TabsContent>
+                  <TabsContent
+                    value="focus"
+                    className="mt-4 rounded-md border border-border bg-background p-4"
+                  >
+                    Track focused sessions while keeping distractions low.
+                  </TabsContent>
+                  <TabsContent
+                    value="review"
+                    className="mt-4 rounded-md border border-border bg-background p-4"
+                  >
+                    Review progress and adjust the next study block.
+                  </TabsContent>
+                </Tabs>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
     </section>
   );
 }

@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import "./globals.css";
+import { Inter } from "next/font/google";
+import { cn } from "@/lib/utils";
+
+const inter = Inter({subsets:['latin'],variable:'--font-sans'});
 
 const appName = process.env.NEXT_PUBLIC_APP_NAME || "StudyFlow";
 
@@ -28,7 +32,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full antialiased">
+    <html lang="en" className={cn("h-full antialiased", "font-sans", inter.variable)}>
       <body className="min-h-full">
         <div className="flex min-h-screen flex-col">
           <header className="border-b border-border bg-surface/90 backdrop-blur">
